@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" initial-scale="1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Calc.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Calculator</title>
+	<link rel="icon" type="image/x-icon"
+	href="https://img.icons8.com/external-greeney-andi-nur-abdillah/1x/external-Calculator-business-(greeney)-greeney-andi-nur-abdillah.png">
+	
+</head>
+
+<body>
+	<!--navbar-->
+	<div>
+		<nav class="navbar navbar-expand-sm bg-info">&nbsp; &nbsp;
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+			<!--<i class="fa fa-bars" onclick=" " aria-hidden="true"></i>&nbsp; &nbsp;-->
+			<a class="navbar-brand" href="#">CALCULATOR</a>
+			</nav>
+	</div>
+	
+
+	<!--Input Fields-->
+<div class="container-md mt-5 mb-5">
+	<div id="left">
+			<table class="table table-dark table-responsive">
+				<tr>
+					<th colspan="4"><input type="text" id="subInput" name="myspace1" disabled></th>
+				</tr>
+				<tr>
+					<th colspan="4"><input type="text" id="calc" name="myspace2" value="0"></th>
+				</tr>
+
+				<!--Buttons-->
+				<tr>
+					<td><button type="button" class="btn btn-light" onclick="getValue('%')">%</button></td>
+					<td><button type="button" class="btn btn-light" onclick="clearAll()">CE</button></td>
+					<td><button type="button" class="btn btn-light" onclick="clearAll()">C</button></td>
+					<td><button type="button" class="btn btn-light" onclick="removeLast()">&larr;</i></button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-light" onclick="oneByx()">1/x</button></td>
+					<td><button type="button" class="btn btn-light" onclick="square()">x^2</button></td>
+					<td><button type="button" class="btn btn-light" onclick="sqrt()">&#8730;</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('/')">&#247;</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-light" onclick="getValue('7')">7</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('8')">8</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('9')">9</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('*')">*</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-light" onclick="getValue('4')">4</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('5')">5</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('6')">6</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('-')">-</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-light" onclick="getValue('1')">1</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('2')">2</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('3')">3</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('+')">+</button></td>
+				</tr>
+				<tr>
+					<!--History-->
+					<td><button type="button" class="btn btn-light" onclick="toggleHistory()">History</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('0')">0</button></td>
+					<td><button type="button" class="btn btn-light" onclick="getValue('.')">.</button></td>
+					<td><button type="button" class="btn btn-info" onclick="solve()">=</button></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="right" class="container overflow-scroll">
+			<h1 id="h1">History</h1>
+			<button id="btnn" type="button" onclick="clearHistory()">Clear</button>
+			<div id="history"></div>
+		</div>
+</div>
+<script type="text/javascript" src="Calc.js"></script>
+</body>
+
+</html>
